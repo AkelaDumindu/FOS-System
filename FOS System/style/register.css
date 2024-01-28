@@ -1,0 +1,38 @@
+.main-outer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.inner-wrapper{
+    padding: 10px;
+    width: 320px;
+    height: auto;
+    min-height: 250px;
+    -webkit-box-shadow: 4px -1px 38px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px -1px 38px -11px rgba(0,0,0,0.75);
+    box-shadow: 4px -1px 38px -11px rgba(0,0,0,0.75);
+    display: inherit;
+    flex-direction: column;
+    justify-content: inherit;
+    align-items: center;
+    border-radius: 5px;
+
+}
+
+.form-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form-controler{
+    flex: 1;
+    padding: 5px;
+    border-radius: 5px;
+  
+}
+
+
