@@ -149,12 +149,13 @@ const placeOrders = () => {
     // Provide default values for fields to avoid undefined or null values
     let  obj = {
         customer: {
-            customerId: customerId || '',
-            name: $('#name').val() || '',
-            address: $('#address').val() || '',
-            sallary: Number.parseInt($('#sallary').val()) || 0
+            customerId: customerId,
+            name: $('#name').val(),
+            address: $('#address').val(),
+            sallary: Number.parseInt($('#sallary').val())
         },
-        orderDate: new Date().toISOString().split('T')[0] || '',
+        orderDate: new Date().toISOString().split('T')[0],
+        totalCost: Number.parseInt($('#net-total').val()),
         // totalCost: Number.parseInt($('#net-total').val()) || 0,
         items: [] // Change items to an array
     };
@@ -168,7 +169,7 @@ const placeOrders = () => {
     database.collection('orders')
     .add(obj)
     .then((response)=>{
-        console.log(response);
+        toastr.success('Saved!', 'Success');
 
     }).catch((error)=>{
 

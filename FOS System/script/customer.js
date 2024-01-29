@@ -120,7 +120,7 @@ const deleteData = (id)=>{
     .doc(id)
     .delete()
     .then(()=>{
-        alert('deleted')
+        toastr.success('Have fun storming the castle!', 'Miracle Max Says');
         loadCustomer();
         customerId = undefined;
     })
