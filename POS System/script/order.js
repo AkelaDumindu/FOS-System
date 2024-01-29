@@ -18,7 +18,7 @@ const loadCustomer = ()=>{
             <td>${data.orderDate}</td>
             <td>${data.totalCost}</td>
             
-            <td>S
+            <td>
             <button class="btn btn-dark" onclick="printData('${records.id}')">Print</button>
             
              </td>

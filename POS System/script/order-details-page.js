@@ -1,4 +1,4 @@
-const loadDate = ()=>{
+    const loadData = ()=>{
     const params = {};
     // const queryParameters = window.location.search.substring(1);
     // const arr = queryParameters.splits(&)
@@ -27,7 +27,7 @@ const loadDate = ()=>{
             const orderRow = `
             <tr>
             <td>${results.id}</td>          
-            <td>${data.orederDate}</td>
+            <td>${data.orderDate}</td>
             <td>${data.totalCost}</td>
             
             <td>`;
@@ -47,23 +47,18 @@ const loadDate = ()=>{
 
             //************ITEM DATA  */
 
-            data.item.forEach(record => {
-
+            data.items.forEach(record => {
                 const itemRow = `
-                <tr>
-                <td>${record.code}</td>          
-                <td>${record.description}</td>S
-                <td>${record.quantity}</td>
-                <td>${record.customer.sallary}</td>
-                
-                <td>`;
-                $('#item-table-body').append(itemRow);
-                
-    
-    
-                
+                    <tr>
+                        <td>${record.code}</td>          
+                        <td>${record.description}</td>
+                        <td>${record.quantity}</td>
+                        <td>${record.unitPrice}</td>
+                        <td>${record.totalCost}</td>
+                    </tr>`;
+                $('#items-table-body').append(itemRow);
             });
-            printData();
+            print();
 
            
             
